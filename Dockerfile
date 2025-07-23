@@ -1,15 +1,13 @@
 FROM python:3.12-slim
 
-WORKDIR /
-
-COPY trading_data/streaming/kafka/ ./kafka
-COPY clients/ ./clients
-COPY utils/ ./utils
+WORKDIR /app
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-ENV PYTHONPATH="/clients:/utils:$PYTHONPATH"
+COPY src/ src/
 
-# Start Kafka producer and consumer scripts
-CMD ["python", "kafka/start_all.py"]
+ENV PYTHONPATH="/app/src"
+
+# Set default command
+CMD ["python", "src/start_all.py"]

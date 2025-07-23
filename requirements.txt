@@ -1,0 +1,12 @@
+psycopg2==2.9.10
+confluent-kafka==2.11.0
+kafka-python-ng==2.2.3
+asyncpg==0.30.0
+dotenv==0.9.9
+python-dotenv==1.1.1
+aiokafka==0.12.0
+websockets==15.0.1
+finnhub-python==2.4.24
+pytz==2025.2
+pytest==8.4.1
+httpx==0.28.1
