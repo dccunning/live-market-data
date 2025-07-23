@@ -1,0 +1,16 @@
+[Unit]
+Description=Kafka Streaming Producer/Consumer
+After=network.target
+
+[Service]
+User=dimitri
+WorkingDirectory=/home/dimitri/services/TradingStrategy
+ExecStart=/home/dimitri/services/TradingStrategy/.venv/bin/python3 /home/dimitri/services/TradingStrategy/trading_data/streaming/kafka/start_all.py
+Restart=always
+RestartSec=1
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONPATH=/home/dimitri/services/TradingStrategy
+EnvironmentFile=/home/dimitri/services/TradingStrategy/.env
+
+[Install]
+WantedBy=multi-user.target
