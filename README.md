@@ -47,3 +47,9 @@ src/
 ## Instructions
 1. Run the Dockerfile to execute start_all.py
 2. Monitor the logs for real-time frequency delays
+
+
+---
+
+## Work To Do
+1. Complete tests for producers, utils and clients
